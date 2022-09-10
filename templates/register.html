@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Subject</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans&display=swap');
+      </style> 
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <h1>Register Now</h1>
+      </div>
+
+      <form action="/register", method='POST'>
+        <div>
+          <label for="name">Name: </label>
+          <input
+            type="text"
+            id="name"
+            required
+            placeholder="Type in Your Name"
+            name="name"
+          />
+        </div>
+        <div>
+          <label for="email">Email: </label>
+          <input
+            type="email"
+            id="email"
+            required
+            placeholder="Type in Your Email address"
+            name="email"
+          />
+        </div>
+
+        <div>
+          <label for="password">Password : </label>
+          <input
+            type="password"
+            id="password"
+            required
+            placeholder="Type in Your Password"
+            name="password"
+          />
+        </div>
+
+        <div>
+          <label for="confPassword">Confirm Password : </label>
+          <input
+            type="password"
+            id="Confpassword"
+            required
+            placeholder="Type in Your Password"
+            name="confPassword"
+          />
+        </div>
+        <button>Submit</button>
+      </form>
+      <p>Already a member, <a href="{{url_for('login')}}">Log in.</a></p>
+    </div>
+  </body>
+</html>

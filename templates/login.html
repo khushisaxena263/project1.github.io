@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Subject</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans&display=swap');
+        </style> 
+        
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <h1>Log in</h1>
+      </div>
+
+      <form action="login", method="POST">
+        <div>
+          <label for="email">Email: </label>
+          <input
+            type="email"
+            id="email"
+            name="emaillog"
+            required
+            placeholder="Type in Your Email address"
+          />
+        </div>
+
+        <div>
+          <label for="password">Password : </label>
+          <input
+            type="password"
+            id="password"
+            name="passwordlog"
+            required
+            placeholder="Type in Your Password"
+          />
+        </div>
+
+                <button> Log in</button>
+      </form>
+      <p>New member, <a href="{{url_for('test')}}">Register Now.</a></p>
+    </div>
+  </body>
+</html>
